@@ -1,8 +1,8 @@
 {
-  "name": "typescript-action",
+  "name": "AutoRealeseDraft",
   "version": "0.0.0",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "My Desc",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -15,17 +15,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/iulianmail007/auto-release-draft.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "YourNameOrOrganization",
+  "author": "Ich",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0"
+    "@actions/core": "^1.2.0",
+    "@angular/cdk": "^9.2.1",
+    "@angular/material": "^9.2.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
