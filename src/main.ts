@@ -2,7 +2,7 @@ import * as core from '@actions/core'
 
 import * as event from './event'
 import * as version from './version'
-
+import * as git from './git'
 
 // import {wait} from './wait'
 
@@ -13,7 +13,7 @@ export async function run(): Promise<void> {
 
 
     if (tag && version.isSemVer(tag)) {
-      //tbd
+      const changelog = await git.getChangesIntroducedByTag(tag)
     }
 
 
