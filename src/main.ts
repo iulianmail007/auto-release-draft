@@ -13,7 +13,7 @@ export async function run(): Promise<void> {
     const token = core.getInput('repo-token')
 
     const tag = event.getCreatedTag()
-    var releaseUrl = ''
+    let releaseUrl = ''
 
 
     if (tag && version.isSemVer(tag)) {
@@ -22,7 +22,7 @@ export async function run(): Promise<void> {
     }
 
 
-    core.setOutput('release-url','releaseUrl')
+    core.setOutput('release-url',releaseUrl)
   } catch (error) {
     core.setFailed(error.message)
   }
