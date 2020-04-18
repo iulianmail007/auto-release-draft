@@ -1,16 +1,22 @@
 import * as core from '@actions/core'
+
+import * as event from './event'
+import * as version from './version'
+
+
 // import {wait} from './wait'
 
 export async function run(): Promise<void> {
   try {
-    // const ms: string = core.getInput('milliseconds')
-    // core.debug(`Waiting ${ms} milliseconds ...`)
 
-    // core.debug(new Date().toTimeString())
-    // await wait(parseInt(ms, 10))
-    // core.debug(new Date().toTimeString())
+    const tag = event.getCreatedTag()
 
-    // core.setOutput('time', new Date().toTimeString())
+
+    if (tag && version.isSemVer(tag)) {
+
+    }
+
+
     core.setOutput('release-url','https://example.com')
   } catch (error) {
     core.setFailed(error.message)
