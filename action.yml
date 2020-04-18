@@ -1,6 +1,10 @@
 name: 'AutoRealeseDraft'
 description: 'My Desc'
 author: 'Your name or organization here'
+inputs:
+    repo-token:
+        description: 'the GITHUB_Token'
+        required: true
 outputs:
   release-url:              # change this
     description: 'The URL'
